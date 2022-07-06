@@ -72,7 +72,7 @@ public class WebuserController {
 				loginSucceeded=true;
 
 			}else {
-				return new ResponseEntity<>("Invalid credentials",HttpStatus.BAD_REQUEST);
+				return ResponseEntity.status(400).body("Invalid credentials");
 			}
 			
 			return ResponseEntity.status(200).body(HttpStatus.OK);
